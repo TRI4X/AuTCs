@@ -11,7 +11,7 @@ namespace OnlineStore.TestCases
     class testcases
     {
         [Test]
-        public void TestHome()
+        public void REQ_UI_03_AND_REQ_UI_04_TestHome()
         {
 
             IWebDriver driver = new ChromeDriver();
@@ -21,10 +21,9 @@ namespace OnlineStore.TestCases
             HomePage homePage = new HomePage(driver);
             Assert.IsTrue(HomePage.ClickAndActive(driver));
             driver.Close();
-
         }
         [Test]
-        public void TestForm()
+        public void REQ_UI_05_AND_REQ_UI_06_TestForm()
         {
 
             IWebDriver driver = new ChromeDriver();
@@ -36,7 +35,7 @@ namespace OnlineStore.TestCases
         }
 
         [Test]
-        public void TestHomePicture()
+        public void REQ_UI_02_TestPictureOnPages()
         {
 
             IWebDriver driver = new ChromeDriver();
@@ -49,19 +48,20 @@ namespace OnlineStore.TestCases
             driver.Close();
         }
         [Test]
-        public void TestFormPicture()
+        public void REQ_UI_01_TestTitleOnPages()
         {
 
             IWebDriver driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Url = "http://uitest.duodecadits.com/";
 
-            Image image = new Image(driver);
-            Assert.IsTrue(image.ImageCheck("form"));
+            TitleCheck title = new TitleCheck(driver);
+            Assert.IsTrue(title.Title("home"));
+            Assert.IsTrue(title.Title("form"));
             driver.Close();
         }
         [Test]
-        public void TestUI()
+        public void REQ_UI_08_TestUI()
         {
 
             IWebDriver driver = new ChromeDriver();
@@ -73,7 +73,7 @@ namespace OnlineStore.TestCases
             driver.Close();
         }
         [Test]
-        public void TestFormPageContent()
+        public void REQ_UI_11_TestFormPageContent()
         {
 
             IWebDriver driver = new ChromeDriver();
@@ -86,7 +86,7 @@ namespace OnlineStore.TestCases
         }
 
         [Test]
-        public void TestFormPageFillinger()
+        public void REQ_UI_12_TestFormPageFillinger()
         {
 
             IWebDriver driver = new ChromeDriver();
@@ -100,7 +100,7 @@ namespace OnlineStore.TestCases
         }
 
         [Test]
-        public void TestHomePageTagH1()
+        public void REQ_UI_09_TestHomePageTagH1()
         {
 
             IWebDriver driver = new ChromeDriver();
@@ -114,7 +114,7 @@ namespace OnlineStore.TestCases
         }
 
         [Test]
-        public void TestHomePageTagP()
+        public void REQ_UI_10_TestHomePageTagP()
         {
 
             IWebDriver driver = new ChromeDriver();
@@ -128,7 +128,7 @@ namespace OnlineStore.TestCases
         }
 
         [Test]
-        public void TestError()
+        public void REQ_UI_07_TestError()
         {
 
             IWebDriver driver = new ChromeDriver();

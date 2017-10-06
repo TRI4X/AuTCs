@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 
@@ -15,8 +14,9 @@ namespace OnlineStore.PageObjects
             PageFactory.InitElements(driver, this);
         }
         public Boolean ImageCheck(String pageName)
-            {
+        {
             driver.FindElement(By.Id(pageName)).Click();
+            System.Threading.Thread.Sleep(500);
             Boolean result = driver.FindElement(By.Id("dh_logo")).Displayed;
             WriteOnConsolole(result, pageName);
             return result;
@@ -26,11 +26,11 @@ namespace OnlineStore.PageObjects
         {
             if (result)
             {
-                Console.Write("image presented on " + page);
+                Console.Write("\nThe logo presented on " + page);
             }
             else
             {
-                Console.Write("image not presented on " + page);
+                Console.Write("\nThe logo is not presented on " + page);
             }
         }
 
