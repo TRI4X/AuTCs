@@ -18,10 +18,10 @@ namespace OnlineStore.PageObjects
 
         public Boolean ClickAndActive()
         {
-            driver.FindElement(By.Id("form")).Click();
-            System.Threading.Thread.Sleep(1000);//need some sleep due to when click method has been used, website temporarliy unavailable (ms)
+            driver.FindElement(By.Id("form")).Click(); //click method to form used by FindElement
+            System.Threading.Thread.Sleep(1000);//need some sleep due to when click method has been used, website temporarily unavailable (ms)
             IWebElement parent = driver.FindElement(By.Id("form")).FindElement(By.XPath(".."));
-            ContentCheck();
+            ContentCheck(); //calls ContentCheck method to execute
             return testcases.elementHasClass(parent, "active");    
         }
 
@@ -29,13 +29,13 @@ namespace OnlineStore.PageObjects
         {
             try
             {
-                Boolean parent = driver.FindElement(By.Id("hello-input")).Displayed;
-                Console.Write("\nText Input is there");
+                Boolean parent = driver.FindElement(By.Id("hello-input")).Displayed; // find hello-input id to be displayed or not and give result to variable 
+                Console.Write("\nText Input is there"); //if so write following text to the console
             }
-            catch (NoSuchElementException)
-            { Console.Write("\nText Input is not there"); }
+            catch (NoSuchElementException) //if not catch that with exception
+            { Console.Write("\nText Input is not there"); } //and write following text to the console
 
-            try
+            try  //same mechanism at inspection of hello-submit
             {
                 Boolean parent1 = driver.FindElement(By.Id("hello-submit")).Displayed;
                 Console.Write("\nSubmit button is there");

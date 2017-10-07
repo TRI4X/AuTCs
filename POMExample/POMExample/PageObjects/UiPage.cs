@@ -17,13 +17,13 @@ namespace OnlineStore.PageObjects
 
         public Boolean ClickAndActive()
         {
-            driver.FindElement(By.Id("site")).Click(); //click method to
+            driver.FindElement(By.Id("site")).Click(); //click method for ID of "site"
             System.Threading.Thread.Sleep(1000);  //need some sleep due to when click method has been used, website temporarily unavailable (ms)
 
             IWebElement parent = driver.FindElement(By.Id("home")).FindElement(By.XPath("..")); //check home is active, if so
             Boolean result = testcases.elementHasClass(parent, "active");
-            WriteOnConsole(result);
-            return result;                                 //will be write to the console it is or not
+            WriteOnConsole(result);  //will be write to the console it is or not
+            return result;         //give return value of result
             
         }
         public void WriteOnConsole(Boolean parent)   

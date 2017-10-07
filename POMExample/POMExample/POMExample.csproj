@@ -61,7 +61,6 @@
     <Compile Include="PageObjects\HomeTag.cs" />
     <Compile Include="PageObjects\HomeTagP.cs" />
     <Compile Include="PageObjects\Image.cs" />
-    <Compile Include="PageObjects\LoginPage.cs" />
     <Compile Include="PageObjects\TitleCheck.cs" />
     <Compile Include="PageObjects\UiPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
