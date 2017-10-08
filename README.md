@@ -5,11 +5,11 @@
 #  lot of information to made project!
 ##############################################################
 
-#I am beginner and very new to use Selenium and C# together #especially in Page Object Design. Achieved by Selenium Webdriver.
+#I am beginner and very new to use Selenium and C# together especially in Page Object Design. Achieved by Selenium Webdriver.
 #I am certain Test Cases can be done another way or easier way in the code.
 
 ##Unfortunately, When I Would have liked to made Test Cases using Gherkin(that was also totally new to me) and watched 
-##tutorials what is this and how to do and realized that, I ##should have done that from the beginning....
+##tutorials what is this and how to do and realized that, I should have done that from the beginning....
 
 ##I know that, I could have used existing code for this, but I did not want to start it nearly completly over from the fundamental.
 ##BTW, I Would have liked to use SpecFlow together with Visual Studio
